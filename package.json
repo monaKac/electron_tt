@@ -1,0 +1,30 @@
+{
+  "name": "electron_tt-1",
+  "version": "1.0.0",
+  "description": "Electron App for Timetracker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monaKac/electron_tt.git"
+  },
+  "keywords": [
+    "Time",
+    "Tracker"
+  ],
+  "author": "Mona K.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/monaKac/electron_tt/issues"
+  },
+  "homepage": "https://github.com/monaKac/electron_tt#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "electron": "^17.1.0"
+  }
+}
