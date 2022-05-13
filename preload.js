@@ -10,6 +10,12 @@ const API = {
         minimize: () => ipcRenderer.send("app/minimize"),
         maximize: () => ipcRenderer.send("app/maximize"),
     },
+    navigation : {
+        load_page: (sPath) => ipcRenderer.send("app/load_page", sPath),
+    },
+    tracking  : {
+        submit: (sData) => ipcRenderer.send("app/submit_tracking", sData),
+    }
 }
 
 

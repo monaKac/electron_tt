@@ -53,3 +53,12 @@ ipcMain.on("app/maximize", _=>{
     }
 
 });
+
+ipcMain.on("app/load_page", _=>{
+    console.log("main.js->load_page()")
+});
+
+ipcMain.on("app/submit_tracking", _=>{
+    console.log("main.js->submit_tracking()");
+    
+});

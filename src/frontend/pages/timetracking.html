@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles.css" />
+        
+    </head>
+    <body>
+        <h1>Time Tracking</h1>
+        <p>This page should provide functionality to track time and see the already tracked time of today</p>
+        <p>It should also display the current number of over hours -> this should be adjustable in settings?</p>
+        
+    <form id="timetracking_form">
+        <label for="ftask">Task Name:</label><br>
+        <input id="taskname" type="text" id="ftask" name="ftask"><br>
+        <label for="fproject">Project:</label><br>
+        <input id="projectname" type="text" id="fproject" name="fproject"><br>
+        <label for="dStartTime">Start Time</label><br>
+        <input id="start_date" type="datetime-local" id="dStartTime" name="dStartTime" value=new Date(Date.now()).toISOString()><br>
+        <label for="ftags">Tags:</label><br>
+        <input id="tags" type="text" id="ftags" name="ftags"><br><br>
+        <button onclick="submit_timetracking()">Submit</button>
+        <!--Add tags add projects-->
+    </form>
+    <script>
+        function submit_timetracking(){
+        console.log("submit_timetracking");
+        let task = document.getElementById('taskname').value;
+        let project = document.getElementById('projectname').value;
+        let start_date = document.getElementById('start_date').value;
+        let tags = document.getElementById('tags').value;
+        let oData = { 
+                        task : task ,
+                        project : project,
+                        start_date : start_date,
+                        tags : tags
+
+                    }
+        app.tracking.submit(sData);
+    }</script> 
+    </body>
+</html>

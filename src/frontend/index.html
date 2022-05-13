@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="darktheme.css" />
+        <link rel="stylesheet" href="styles.css" />
         <title>Timetracker</title>
     </head>
     <body>
         <nav>
             <div class="left-nav">
-                <span class="nav-link">&#x2630;</span> <!--hamburger menu-->
+                <span class="nav-link" id="open_menu">&#x2630;</span> <!--hamburger menu-->
             </div>
                 
             <div class="right-nav">
@@ -16,8 +16,23 @@
                 <span class="nav-link" id="close_app">&#10006;</span> <!--x-->
             </div>
         </nav>
+        <div class="content">
+            <div class="menu">
+                <ul class="list_without_bullets">
+                    <li><a class="sidebar_item" id="navPageTracking">Tracking</a></li>
+                    <li><a class="sidebar_item" id="navPageStatistics">Statistics</a></li>
+                    <li><a class="sidebar_item" id="navPageHistory">History</a></li>
+                    <li><a class="sidebar_item" id="navPageSettings">Settings</a></li>
+                </ul>
+            </div>
+            <div class="page" id="mainContentContainer">
+                <iframe src="pages/timetracking.html" frameBorder="0"></iframe> 
+            </div>
+        </div>
        
        <script src="./renderer.js" defer type="module"></script>
        <script src="./window.js" defer type="module"></script>
+       <script src="./sidebar.js" defer type="module"></script>
+       <script src="./timetracking.js" defer type="module"></script>
     </body>
 </html>
